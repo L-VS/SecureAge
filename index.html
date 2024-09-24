@@ -3,59 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SecureAge</title>
+    <title>SecureAge Browser</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="container">
+        <!-- Barre de navigation -->
+        <header>
+            <div class="logo">
+                <h1>SecureAge</h1>
+            </div>
+            <input type="text" id="searchBar" placeholder="Recherche...">
+            <button id="searchBtn">Rechercher</button>
+            <button id="savePageBtn">Enregistrer hors ligne</button>
+        </header>
 
-    <!-- Header with logo and navigation -->
-    <header>
-        <div class="logo">
-            <h1>SecureAge</h1>
-        </div>
-        <nav>
+        <!-- Panneau latéral avec fonctionnalités -->
+        <nav class="sidebar">
             <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Actualités</a></li>
-                <li><a href="#">Simplifier</a></li>
+                <li>🔒 VPN</li>
+                <li>🚫 Supprimer Pub</li>
+                <li>🤖 IA Assistance</li>
+                <li>☁️ Météo</li>
+                <li>🕑 Historique</li>
             </ul>
         </nav>
-    </header>
 
-    <!-- Main search section with AI search box and options -->
-    <main>
-        <section class="search-section">
-            <h2>Recherche Sage</h2>
-            <div class="search-box">
-                <input type="text" placeholder="Tapez votre recherche ici...">
-                <button id="search-btn">Recherche</button>
-            </div>
-            <div class="options">
-                <button id="optimize-btn">Optimisation IA</button>
-                <button id="vpn-btn">Activer VPN</button>
-                <button id="remove-ads-btn">Supprimer les pubs</button>
-            </div>
-        </section>
+        <!-- Zone principale pour l'affichage web -->
+        <main id="webDisplay">
+            <iframe id="iframeDisplay" src="https://www.google.com"></iframe>
+        </main>
 
-        <!-- Sidebar with tools like VPN, ad blocker, etc. -->
-        <aside class="sidebar">
-            <ul>
-                <li>VPN</li>
-                <li>Suppression des pubs</li>
-                <li>Météo</li>
-                <li>IA Interactions</li>
-            </ul>
-        </aside>
-
-        <!-- Footer with quick access buttons -->
-        <footer>
-            <div class="footer-controls">
-                <button class="control-btn">Accès rapide</button>
-                <button class="control-btn">Mode sombre</button>
-                <button class="control-btn">Réglages automatiques</button>
-            </div>
-        </footer>
-    </main>
+        <!-- Historique des pages consultées -->
+        <div id="historyContainer">
+            <h2>Historique</h2>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
